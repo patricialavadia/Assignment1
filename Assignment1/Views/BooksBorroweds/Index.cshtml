@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<Assignment1.Models.BooksBorrowed>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Books Borrowed";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Books Borrowed</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -14,27 +14,26 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.BookId)
+                Book ID
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MemberId)
+                Member ID
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.BookTitle)
+                Book Title
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MemberFname)
+                Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MemberLname)
+                Date Borrowed
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DateBorrowed)
+                Return Date
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ReturnDate)
+                Actions
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -50,10 +49,7 @@
                 @Html.DisplayFor(modelItem => item.BookTitle)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.MemberFname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MemberLname)
+                @Html.DisplayFor(modelItem => item.MemberFname)  @Html.DisplayFor(modelItem => item.MemberLname)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DateBorrowed)

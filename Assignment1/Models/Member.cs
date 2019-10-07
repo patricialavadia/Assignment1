@@ -10,20 +10,22 @@ namespace Assignment1.Models
     {
         [Column("member_id")]
         public int MemberId { get; set; }
-        [Required]
+        [Required (ErrorMessage = "First Name is Required")]
         [Column("member_fname")]
         [StringLength(50)]
         public string MemberFname { get; set; }
-        [Required]
+        [Required (ErrorMessage = "Last Name is Required")]
         [Column("member_lname")]
         [StringLength(50)]
         public string MemberLname { get; set; }
+        [Required (ErrorMessage = "Contact Number is Required")]
         [Column("contact_no")]
         public int ContactNo { get; set; }
-        [Required]
+        [Required (ErrorMessage = "Address is Required")]
         [Column("address")]
         [StringLength(50)]
         public string Address { get; set; }
+        [Required (ErrorMessage = "Contact Number is Required")]
         [Column("expiration", TypeName = "date")]
         public DateTime Expiration { get; set; }
     }

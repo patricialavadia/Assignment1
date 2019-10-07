@@ -11,16 +11,19 @@ namespace Assignment1.Models
         [Key]
         [Column("book_id")]
         public int BookId { get; set; }
-        [Required]
+        [Required (ErrorMessage= "Book Title is Required")]
         [Column("book_title")]
         [StringLength(50)]
         public string BookTitle { get; set; }
-        [Required]
+        [Required (ErrorMessage= "Book Author is Required ")]
         [Column("book_author")]
         [StringLength(50)]
         public string BookAuthor { get; set; }
+        [Required(ErrorMessage = "Published Date is Required ")]
         [Column("publish_date", TypeName = "date")]
+         [DataType(DataType.Date)]
         public DateTime PublishDate { get; set; }
+        [Required(ErrorMessage = "Number of Stocks is Required ")]
         [Column("book_stocks")]
         public int BookStocks { get; set; }
     }

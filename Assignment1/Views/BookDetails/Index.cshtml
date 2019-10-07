@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<Assignment1.Models.BookDetails>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Book Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Book Details</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -14,18 +14,20 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.BookTitle)
+                Book Title
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.BookAuthor)
+                Author
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PublishDate)
+                Date Published
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.BookStocks)
+                Number of Stocks
             </th>
-            <th></th>
+            <th>
+                Actions
+            </th>
         </tr>
     </thead>
     <tbody>

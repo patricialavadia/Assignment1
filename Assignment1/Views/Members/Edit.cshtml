@@ -1,13 +1,12 @@
 ﻿@model Assignment1.Models.Member
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Edit Information";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Edit</h1>
+<h1>Edit Information</h1>
 
-<h4>Member</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -15,27 +14,27 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="MemberId" />
             <div class="form-group">
-                <label asp-for="MemberFname" class="control-label"></label>
+                <label asp-for="MemberFname" class="control-label">First Name</label>
                 <input asp-for="MemberFname" class="form-control" />
                 <span asp-validation-for="MemberFname" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MemberLname" class="control-label"></label>
+                <label asp-for="MemberLname" class="control-label">Last Name</label>
                 <input asp-for="MemberLname" class="form-control" />
                 <span asp-validation-for="MemberLname" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ContactNo" class="control-label"></label>
+                <label asp-for="ContactNo" class="control-label">Contact Number</label>
                 <input asp-for="ContactNo" class="form-control" />
                 <span asp-validation-for="ContactNo" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Address" class="control-label"></label>
+                <label asp-for="Address" class="control-label">Address</label>
                 <input asp-for="Address" class="form-control" />
                 <span asp-validation-for="Address" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Expiration" class="control-label"></label>
+                <label asp-for="Expiration" class="control-label">Validity</label>
                 <input asp-for="Expiration" class="form-control" />
                 <span asp-validation-for="Expiration" class="text-danger"></span>
             </div>
